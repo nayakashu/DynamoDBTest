@@ -1,0 +1,18 @@
+{
+  "name": "dynamodbtest",
+  "version": "1.0.0",
+  "description": "DynamoDB Test Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "DynamoDB",
+    "Test"
+  ],
+  "author": "nayakashu",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.94.0"
+  }
+}
