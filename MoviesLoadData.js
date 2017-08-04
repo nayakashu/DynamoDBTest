@@ -10,7 +10,7 @@ console.log("Importing movies into DynamoDB. Please wait.");
 var allMovies = JSON.parse(fs.readFileSync('movies_data/moviedata.json', 'utf8'));
 allMovies.forEach(function(movie) {
     var params = {
-        TableName: "Movies",
+        TableName: "Movies_Clone",
         Item: {
             "year":  movie.year,
             "title": movie.title,

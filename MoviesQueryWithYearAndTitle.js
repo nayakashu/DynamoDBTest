@@ -4,8 +4,6 @@ var AWSConfig = require("./config/aws_config_remote")();
 
 var docClient = new AWS.DynamoDB.DocumentClient();
 
-console.log("Querying for movies from 1992 - titles A-L, with genres and lead actor");
-
 var params = {
     TableName : "Movies",
 
@@ -18,11 +16,13 @@ var params = {
         "#yr": "year"
     },
     ExpressionAttributeValues: {
-        ":yyyy":1992,
+        ":yyyy": 1992,
         ":letter1": "A",
         ":letter2": "L"
     }
 };
+
+console.log("Querying for movies from " + params.ExpressionAttributeValues[":yyyy"] + " - titles A-L, with genres and lead actor");
 
 docClient.query(params, function(err, data) {
     if (err) {

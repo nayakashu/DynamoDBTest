@@ -5,7 +5,7 @@ var AWSConfig = require("./config/aws_config_remote")();
 var dynamodb = new AWS.DynamoDB();
 
 var params = {
-    TableName : "Movies_Gallery"
+    TableName : "Movies"
 };
 
 dynamodb.deleteTable(params, function(err, data) {
